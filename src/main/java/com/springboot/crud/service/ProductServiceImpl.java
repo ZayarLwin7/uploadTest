@@ -75,7 +75,7 @@ public class ProductServiceImpl implements ProductService {
     public void editProduct(int id, ProductDto productDto) {
         Product product = repo.findById(id).orElse(null); // Get product or null if not found
         if (product == null) {
-            throw new IllegalArgumentException("Product not found with id: " + id);
+            throw new IllegalArgumentException("Product not found with this_id: " + id);
         }
         
         String uploadDir = "public/images/";
